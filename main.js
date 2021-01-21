@@ -67,7 +67,7 @@ submitBtn.addEventListener("click", function (event) {
     event.stopPropagation();
     addScore();
     
-    window.location.href = './highscores.html'
+    window.location.href = 'highscores.html'
 });
 
 function addScore () {

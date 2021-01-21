@@ -3,18 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz!</title>
+    <link rel= "stylesheet" href= "reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous">
     <link rel= "stylesheet" href= "style.css">
+    <title>Coding Quiz!</title>
+    
 </head>
-    <div class="container">
-        <div id="home" class= "flex-center flex-column">
-            <h1>Timed Coding Quiz</h1>
-            <h2>120 Timer. Incorrect answers will deduct 20 seconds.</h2>
-            <a class="btn" href= "/highscores.html">Click to view High Scores</a>
 
+<body>
+    <header class="p-2" style="background-color: rgb(55, 16, 248)">
+        <strong><a href="highscores.html">TOP PLAYERS</a></strong>
+        <span id="timer" class="float-right mr-2">Time: 0</span>
+    </header>
+
+    <!-- Home screen container -->
+    <div class="container mt-5" id="home">
+        <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8 text-center">
+                <h1>Coding Quiz!</h1><br>
+                <h5><p>Try to answer these questions about mushrooms in 120 seconds... <br></h5>
+                    <b><i>NOTE:</i> <br>
+                    </b>Incorrect answers deduct 20seconds from timer!</p> <br>
+                <button type="button" id="startBtn" class="btn btn-info btn-lg">START QUIZ</button>
+            </div>
         </div>
     </div>
-<body>
-    
+
+    <!-- Q&A container-->
+    <div class="container mt-5 d-none" id="quiz">
+        <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8" id="QA-block">
+                <h3 id="questions" class="mb-4">QUESTION</h3>
+                <ul id="answers" class="list-unstyled">
+                    <li class="answerChoice">A) </li>
+                    <li class="answerChoice">B) </li>
+                    <li class="answerChoice">C) </li>
+                    <li class="answerChoice">D) </li>
+                </ul>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Finished screen container -->
+    <div class="container mt-5 d-none" id="submit-score">
+        <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8">
+                <h2>Finished!</h2>
+                <p id="user-score"> </p>
+                <form class="form-group">
+                    <label for="new-score">Enter your name: </label>
+                    <input type="text" id="userName">
+                    <button type="button" class="btn btn-info btn-sm submitBtn">Enter name to TOP PLAYER list</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" 
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" 
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" 
+        crossorigin="anonymous"></script>
+    <script src="questions.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
