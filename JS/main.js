@@ -1,31 +1,26 @@
 var startBtn = document.getElementById("startBtn");
 var submitBtn = document.querySelector("button.submitBtn")
-var secondsLeft = (questions.length * 20 + 1);
 var timerElement = document.getElementById("timer");
+var secondsLeft = (questions.length * 20 + 1);
+var questionHead = document.getElementById("questions");
+var answerChoices = document.getElementById("answers");
+var questionNumber = -1;
+var answer;
 var submitScoreElement = document.querySelector("#submit-score");
 var userScoreElement = document.getElementById("user-score");
 var userNameInput;
-var questionHead = document.getElementById("questions");
-var answerChoices = document.getElementById("answers");
 
-var questionNumber = -1;
-var answer;
 
 
 function startTimer() {
- 
     document.getElementById("home").classList.add('d-none');
     document.getElementById("quiz").classList.remove('d-none');
-
     // timer set and begins 120 second countdown
     setTimer();
-
     // create questions to display
     makeQuestions();
 }
-
 function setTimer() {
-
     var countdown = setInterval(function () {
         secondsLeft--;
         timerElement.textContent = "Time: " + secondsLeft;
@@ -46,11 +41,10 @@ function makeQuestions() {
 
     var choices = questions[questionNumber].choices;
 
-    for (var q = 0; q < choices.length; q++) {
+    for (var i = 0; i < choices.length; i++) {
         var nextChoice = document.createElement("button");
-
-        nextChoice.textContent = choices[q]
-        answerBtn = answerChoices.appendChild(nextChoice).setAttribute("class", "p-3 m-1 btn btn-light btn-block");
+        nextChoice.textContent = choices[i]
+        answerBtn = answerChoices.appendChild(nextChoice).setAttribute("class", "p-4 m-2 btn btn-dark btn-block");
     }
 }
 
@@ -66,7 +60,6 @@ startBtn.addEventListener("click", startTimer);
 submitBtn.addEventListener("click", function (event) {
     event.stopPropagation();
     addScore();
-    
     window.location.href = 'highscores.html'
 });
 
@@ -87,26 +80,26 @@ var newScore = {
 }
 
 function hideFeedback(){
-    var pElement = document.getElementsByClassName("feedback")[0]
-    pElement.style.display='none'
+    var feedbackEl = document.getElementsByClassName("feedback")[0]
+    feedbackEl.style.display='none'
 }
 
 function showFeedback(){
-    var pElement = document.getElementsByClassName("feedback")[0]
-    pElement.removeAttribute('style');
+    var feedbackEl = document.getElementsByClassName("feedback")[0]
+    feedbackEl.removeAttribute('style');
 }
 
 answerChoices.addEventListener("click", function (event) {
-    var pElement = document.getElementsByClassName("feedback")[0]
+    var feedbackEl = document.getElementsByClassName("feedback")[0]
     
     // displays if answer is correct or incorrect
     if (answer === event.target.textContent) {   
-        pElement.innerHTML = "CORRECT";
+        feedbackEl.innerHTML = "CORRECT";
         setTimeout(hideFeedback,1225);
         showFeedback();   
         
     } else {
-        pElement.innerHTML = "INCORRECT";
+        feedbackEl.innerHTML = "INCORRECT";
         setTimeout(hideFeedback,1225);
         secondsLeft = secondsLeft - 20;
         showFeedback();

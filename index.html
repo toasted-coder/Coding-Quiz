@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" href= "reset.css">
+    <link rel="stylesheet" href= "./CSS/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
     crossorigin="anonymous">
-    <link rel= "stylesheet" href= "style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>Coding Quiz!</title>
     
 </head>
@@ -23,17 +23,16 @@
         <div class="row justify-content-center mt-5 pt-3 pb-3">
             <div class="col-10 col-lg-8 text-center">
                 <h1>Coding Quiz!</h1><br>
-                <h5><p>Try to answer these questions about mushrooms in 120 seconds... <br></h5>
-                    <b><i>NOTE:</i> <br>
-                    </b>Incorrect answers deduct 20seconds from timer!</p> <br>
-                <button type="button" id="startBtn" class="btn btn-info btn-lg">START QUIZ</button>
+                <h5><p>You have 120 seconds to answer the questions!<br></h5>
+                    <h2>Incorrect answers deduct 20seconds from timer!</h2></p><br>
+                <button type="button" id="startBtn" class="btn btn-primary btn-lg">START QUIZ</button>
             </div>
         </div>
     </div>
 
     <!-- Q&A container-->
-    <div class="container mt-5 d-none" id="quiz">
-        <div class="row justify-content-center mt-5 pt-3 pb-3">
+    <div class="container mt-7 d-none" id="quiz">
+        <div class="row justify-content-center mt-7 pt-5 pb-5">
             <div class="col-10 col-lg-8" id="QA-block">
                 <h3 id="questions" class="mb-4">QUESTION</h3>
                 <ul id="answers" class="list-unstyled">
@@ -48,9 +47,9 @@
     </div>
 
     <!-- Finished screen container -->
-    <div class="container mt-5 d-none" id="submit-score">
-        <div class="row justify-content-center mt-5 pt-3 pb-3">
-            <div class="col-10 col-lg-8">
+    <div class="container mt-7 d-none" id="submit-score">
+        <div class="row justify-content-center mt-7 pt-5 pb-5">
+            <div class="col-8 col-lg-6">
                 <h2>Finished!</h2>
                 <p id="user-score"> </p>
                 <form class="form-group">
@@ -71,7 +70,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" 
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" 
         crossorigin="anonymous"></script>
-    <script src="questions.js"></script>
-    <script src="main.js"></script>
+    <script src="./JS/questions.js"></script>
+    <script src="./JS/main.js"></script>
 </body>
 </html>
