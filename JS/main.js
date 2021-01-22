@@ -95,12 +95,12 @@ answerChoices.addEventListener("click", function (event) {
     // displays if answer is correct or incorrect
     if (answer === event.target.textContent) {   
         feedbackEl.innerHTML = "CORRECT";
-        setTimeout(hideFeedback,1225);
+        setTimeout(hideFeedback,1200);
         showFeedback();   
         
     } else {
         feedbackEl.innerHTML = "INCORRECT";
-        setTimeout(hideFeedback,1225);
+        setTimeout(hideFeedback,1200);
         secondsLeft = secondsLeft - 20;
         showFeedback();
     }    
