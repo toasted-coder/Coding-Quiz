@@ -1,6 +1,9 @@
 # 04 Web APIs: Code Quiz
 
-Project goal: create a timed quiz that deducts a set amount of time for incorrect answers. At the end of the quiz your score is given and an option to save it to a "leaderboard" is given. Have an option to restart the quiz and reset the leaderboard needs to be available on the leaderboard page.
+Project goal: create a timed quiz that deducts a set amount of time for incorrect answers. At the end of the quiz your score is given and an option to save it to a "leaderboard" is given. Have an option to restart the quiz and reset the leaderboard needs to be available on the leaderboard page.<br>
+![CQhome](https://user-images.githubusercontent.com/71535801/105541255-59767d80-5cac-11eb-8bb0-d4950816b6a3.jpg)<br>
+![CQmidgame](https://user-images.githubusercontent.com/71535801/105541272-5da29b00-5cac-11eb-887d-366eef8be580.jpg)<br>
+![CQleaderboard](https://user-images.githubusercontent.com/71535801/105541262-5bd8d780-5cac-11eb-8eff-af70b65adf39.jpg)<br>
 
 
 
