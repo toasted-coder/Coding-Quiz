@@ -20,7 +20,7 @@ function startTimer() {
     // create questions to display
     makeQuestions();
 }
-function setTimer() {
+function setTimer() { //function for when the timer reaches 0
     var countdown = setInterval(function () {
         secondsLeft--;
         timerElement.textContent = "Time: " + secondsLeft;
@@ -32,7 +32,7 @@ function setTimer() {
     }, 1000);
 }
 
-function makeQuestions() {
+function makeQuestions() { //function for displaying the questions
     questionNumber++;
     answer = questions[questionNumber].answer
 
@@ -63,7 +63,7 @@ submitBtn.addEventListener("click", function (event) {
     window.location.href = 'highscores.html'
 });
 
-function addScore () {
+function addScore () { //functnion for adding score to scoreboard
     userNameInput = document.getElementById("userName").value
     
     // creates a new object with name and score value
@@ -79,17 +79,17 @@ var newScore = {
     localStorage.setItem("highScores", JSON.stringify(highScores));
 }
 
-function hideFeedback(){
+function hideFeedback(){ //function to hide the incorrect/correct feedback under the questions after answering
     var feedbackEl = document.getElementsByClassName("feedback")[0]
     feedbackEl.style.display='none'
 }
 
-function showFeedback(){
+function showFeedback(){ //function that displays the incorrect/correct feedback under the questions after answering
     var feedbackEl = document.getElementsByClassName("feedback")[0]
     feedbackEl.removeAttribute('style');
 }
 
-answerChoices.addEventListener("click", function (event) {
+answerChoices.addEventListener("click", function (event) { //click event that contains an if/else statement dictating which feedback to display
     var feedbackEl = document.getElementsByClassName("feedback")[0]
     
     // displays if answer is correct or incorrect
